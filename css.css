@@ -1,0 +1,100 @@
+:root {
+  --verde: #2E7D32;
+  --naranja: #FF6F00;
+  --negro: #000000;
+  --blanco: #FFFFFF;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+/* Hero */
+.hero-section {
+  background: url("https://img.freepik.com/fotos-premium/variedad-sushi-aislado-sobre-fondo-negro-comida-tradicional-japonesa_138656-976.jpg") center/cover no-repeat;
+  position: relative;
+  min-height: 80vh;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Textos destacados */
+.text-naranja {
+  color: var(--naranja);
+}
+
+/* Botones */
+.btn-success {
+  background-color: var(--verde);
+  border: none;
+}
+.btn-success:hover {
+  background-color: #256628;
+}
+.btn-warning {
+  background-color: var(--naranja);
+  color: var(--blanco);
+  border: none;
+}
+.btn-warning:hover {
+  background-color: #e65c00;
+}
+
+/* Cards */
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+.card {
+  border: none;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Formulario */
+#contacto .form-control:focus {
+  border-color: var(--naranja);
+  box-shadow: 0 0 5px rgba(255, 111, 0, 0.5);
+}
+
+/* Alert */
+.alert-success {
+  border-left: 5px solid var(--verde);
+}
+
+/* Footer */
+footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* 🌙 Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  .card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  footer {
+    background-color: #000;
+  }
+  .navbar {
+    background-color: #111 !important;
+  }
+}
